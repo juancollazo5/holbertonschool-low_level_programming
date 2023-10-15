@@ -1,6 +1,6 @@
-#include <stdio>
+#include <stdio.h>
 /**
- * main: Write a C program that prints
+ * main - Write a C program that prints
  * Return: Always 0.
  */
 int main(void)

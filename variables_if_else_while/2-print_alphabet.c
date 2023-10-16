@@ -5,12 +5,12 @@
  */
 int main(void)
 {
-char c;
+	char letter;
 
-for (c = 'a'; c <= 'z'; c++);
-	putchar(c);
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
 
-putchar('\n');
+	putchar('\n');
 
-return (0);
+	return (0);
 }

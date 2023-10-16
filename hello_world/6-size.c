@@ -20,7 +20,7 @@ printf("Size of a long int: %lubyte(s)\n", (unsigned long)sizeof(c));
 
 printf("Size of a long long int: %lubyte(s)\n", (unsigned long)sizeof(d));
 
-printf("Size of a float: %lubyte(s)\n", (unsigned long)sizeof));
+printf("Size of a float: %lubyte(s)\n", (unsigned long)sizeof(f));
 
 return (0);
 }

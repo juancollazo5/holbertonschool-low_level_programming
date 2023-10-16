@@ -4,7 +4,6 @@
 /**
  * main - Entry point
  * Return: Always 0.
- * @n: variable
  */
 int main(void)
 {

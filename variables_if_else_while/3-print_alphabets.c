@@ -1,16 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
  * main - Entry point
  * Return: Always 0.
  */
 int main(void)
 {
-char a;
+char a, b;
 
-if (a = 'a'; a <= 'z', a++)
+for (a = 'a'; a <= 'z', a++)
+for (b = 'A'; b <= 'Z', b++)
 putchar(a);
-putchar('\n')
+putchar(b);
+putchar('\n');
+
 return (0);
 }

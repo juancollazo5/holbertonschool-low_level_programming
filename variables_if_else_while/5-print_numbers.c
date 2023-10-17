@@ -9,7 +9,8 @@ int a;
 
 for (a = 0; a < 10; a++)
 
-printf("%d\n", a);
+printf("%d", a);
+printf('\n');
 
 return (0);
 }

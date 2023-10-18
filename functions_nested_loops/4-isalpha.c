@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _islower - check the code
+ * _isalpha - check the code
  * @c: letter
  * Return: 1 if c is a letter
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);

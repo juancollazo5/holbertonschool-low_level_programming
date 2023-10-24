@@ -10,10 +10,10 @@
 void rev_string(char *s)
 
 {
-  char s[100]; //string declaration
-   printf("Enter a string:");
-   gets(s); //input
-   strrev(s); //reversing string
-   printf("The reverse of the string: %s\n", s);
-   return 0;
+   char s[10] = "My School";
+
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
+    return (0);
 }

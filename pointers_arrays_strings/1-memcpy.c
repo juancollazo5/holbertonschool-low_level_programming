@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
   * *-memcpy - function
   * @dest: pointer to dest str

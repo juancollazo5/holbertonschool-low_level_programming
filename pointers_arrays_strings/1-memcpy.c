@@ -1,3 +1,4 @@
+#include <stdio>
 /**
   * *-memcpy - function
   * @dest: pointer to dest str

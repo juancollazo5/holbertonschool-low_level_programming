@@ -1,5 +1,5 @@
  /**
-  * *_memset - function
+  * _memset - function
   *
   * @s: pointer to start of memory area
   * @b: constant byte

@@ -1,30 +1,32 @@
+#include "main.h"
+
 /**
  * _strspn - function
- *
- * @s: string to check
- * @accept: substring of chars
- *
- * Return: n bytes
+ * @s: input
+ * @accept: input
+ * Return: number of bytes in the initial segment of s
  */
 unsigned int _strspn(char *s, char *accept)
 {
-		int i;
-			int consistC = 0;
-				int prevC;
+	unsigned int i, n, value, check;
 
-	while (*s)
-{
-		i = 0;
-		prevC = consistC;
-	while (*(accept + i) != '\0')
-{
-	if (*(accept + i) == *s)
-	consistC++;
-	i++;
-}
-	if (prevC == consistC)
-	 break;
-	s++;
-}
-	return (consistC);
+	value = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		check = 0;
+
+		for (n = 0; accept[n] != '\0'; n++)
+		{
+			if (accept[n] == s[i])
+			{
+				value++;
+				check = 1;
+			}
+		}
+		if (check == 0)
+			return (value);
+	}
+
+	return (value);
 }

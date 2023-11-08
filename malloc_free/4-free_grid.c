@@ -1,16 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 /**
- * free_grid- fuction to free incoming array from malloc
- * @grid: ptr of array 2d from malloc
- * @height: size of dimension 2
+ * free_grid - freeing matrix
+ * @grid: matrix being passed
+ * @height: freeing using this variable
+ * Return: nothing
  */
 void free_grid(int **grid, int height)
 {
-	int i;
+	int a;
 
-	for (i = 0; i < height; i++)
-		free(grid[i]);
-		free(grid);
+	for (a = 0; a < height; a++)
+		free(grid[a]);
+	free(grid);
 }

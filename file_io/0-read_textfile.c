@@ -10,15 +10,15 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int of, rf, wf;
+int o_f, r_f, w_f;
 char *buffer;
 
 if (filename == NULL) /*Error Proof.*/
 	return (0);
 
 
-of = open(filename, O_RDONLY); /*Opening a file to be read only.*/
-if (of == -1)
+o_f = open(filename, O_RDONLY); /*Opening a file to be read only.*/
+if (o_f == -1)
 	return (0);
 
 buffer = malloc(sizeof(char) * letters); /*Space for amount of letters.*/
@@ -27,18 +27,18 @@ if (buffer == NULL) /*Error Proof.*/
 	return (0);
 
 /*Reads letters in the file that are being counted.*/
-rf = read(fd,  buffer, letters);
-if (rf == -1)
+r_f = read(o_f,  buffer, letters);
+if (r_f == -1)
 	return (0);
 
 /*Writes amount of 'char's being counted.*/
-wf = write(STDOUT_FILENO, buffer, count);
+w_f = write(STDOUT_FILENO, buffer, count);
 
-if (wf == -1) /*Error Proof.*/
+if (w_f == -1) /*Error Proof.*/
 	return (0);
 
 free(buffer); /*Free space to contain letters.*/
-close(0f); /*Closes file being managed.*/
+close(0_f); /*Closes file being managed.*/
 
 return (count);
 }

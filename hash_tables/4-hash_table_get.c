@@ -1,30 +1,35 @@
+#include <stdio.h>
 #include "hash_tables.h"
-
+#include <string.h>
 /**
- * hash_table_get - Get a value from the hash table.
- * @ht: Hash table.
- * @key: Key.
- *
- * Return: The value if works, NULL if doesn't.
+ * hash_table_get - finds a value associated to a key
+ * @key: unique key
+ * @ht: hash table
+ * Return: value associated to key
  */
+
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
+	unsigned long int size = 0;
 	unsigned long int index;
-	hash_node_t *current;
+	hash_node_t *current_node;
 
-	if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
+	if (key == NULL || *key == '\0' || ht == NULL)
 		return (NULL);
 
-	index = key_index((const unsigned char *)key, ht->size);
-	current = ht->array[index];
-	if (current == NULL)
-		return (NULL);
-	while (strcmp(current->key, key) && current != NULL)
+	size = ht->size;/* size of table array */
+	index = (hash_djb2((const unsigned char *)key) % size);
+
+	current_node = ht->array[index]; /* get current node from index */
+
+	while (current_node) /* check if key exists in list */
 	{
-		current = current->next;
+		if (strcmp(current_node->key, key) == 0) /* match key, get value */
+		{
+			return (current_node->value);
+		}
+		current_node = current_node->next;/* next node */
 	}
-	if (current == NULL)
-		return (NULL);
-	else
-		return (current->value);
+
+	return (NULL);
 }

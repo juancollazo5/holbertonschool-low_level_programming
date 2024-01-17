@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
  * get_endianness - retunrs the endian of the processor
  *
